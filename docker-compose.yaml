@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  coodinator:
+    build:
+      context: ./
+    hostname: trino
+    ports:
+      - "8080:8080"

@@ -1,6 +1,6 @@
 FROM openjdk:11-jdk-buster
 
-ENV JAVA_HOME /usr/java/default
+ENV JAVA_HOME /usr/local/openjdk-11
 ENV PATH $PATH:$JAVA_HOME/bin
 ENV VERSION=367
 ENV TRINO_VERSION=${VERSION}

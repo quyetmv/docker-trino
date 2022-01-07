@@ -1,14 +1,6 @@
 #!/bin/bash
 
-set -xeuo pipefail
-
-if [[ ! -d /usr/local/trino/etc ]]; then
-    if [[ -d /etc/trino ]]; then
-        ln -s /etc/trino /usr/local/trino/etc
-    else
-        ln -s /usr/local/trino/default/etc /usr/local/trino/etc
-    fi
-fi
+ln -s /etc/trino /usr/local/trino/etc
 
 set +e
 grep -s -q 'node.id' /usr/local/trino/etc/node.properties
